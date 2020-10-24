@@ -6,4 +6,9 @@ export class CoffeesController {
     findAll(){
         return "Found all coffees"
     }
+
+    @Get('flavours')
+    findFlavours(){
+        return "Found all flavours of coffee"
+    }
 }
