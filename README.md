@@ -30,6 +30,10 @@ git add .
 Using the plugin to VSCode, I updated all the packages to their latest versions.
 There was a conflict with typescript 4.x though, so that was reverted to the original value until further analysis.
 
-
+# Activity: Generate first controller
+Shorthand is `nest g co` for a controller
+Without spec files is `nest g co --no-spec`
+In a path is `nest g co /{{path/for/controller}}`
+To simulate before running `nest g co --dry-run`
 
 [1]: https://docs.nestjs.com/
