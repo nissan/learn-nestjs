@@ -4,18 +4,28 @@
 
 ### Notes:
 Target: Windows environment. 
-Tried using Yarn instead of npm to install nest globally gives an error.
+Installing with npm as per the instructions, i.e.
+
+`npm i -g @nestjs/cli`
+
+is better than trying to do so with `yarn`
+Using Yarn instead of npm to install nest globally gives an error.
 See https://github.com/nestjs/nest-cli/issues/613#issuecomment-602235328 for the root issue why this doesn't work without the additional step of running
 
 `yarn global add @nestjs/schematics`
 
-after, or removing it with yarn and re-installing with npm as per the instructions.
+Save yourself the headache, follow the docs and use npm for this step. The installer for creating a new app lets you use `yarn` at this point so it's not a bad tradeoff.
 
-Creating the project, it adds its own `.git` folder, which created a problem since this was a folder inside my main git repo. 
-In the hello-world folder remove the .git folder with
+Creating the project with `nest new`, the new project adds its own `.git` folder, which created a problem since my learning repository was the main folder and the new project was a sub-folder inside my main git repo.
+To resolve I ran the following commands
 
-`rm -r -fo .git`
+```powershell
+cd {{appname}}
+rm -r -fo .git
+cd ..    
+git add .  
+```
 
-and this will allow it to work with the parent folder git settings.
+
 
 [1]: https://docs.nestjs.com/
