@@ -11,11 +11,6 @@ See https://github.com/nestjs/nest-cli/issues/613#issuecomment-602235328 for the
 
 after, or removing it with yarn and re-installing with npm as per the instructions.
 
-Creating the project, it adds its own `.git` folder, which created a problem since this was a folder inside my main git repo. 
-In the hello-world folder remove the .git folder with
-
-`rm -r -fo .git`
-
-and this will allow it to work with the parent folder git settings.
+Creating the project, it adds its own `.git` folder, which created a problem since this was a folder inside my main git repo.
 
 [1]: https://docs.nestjs.com/
