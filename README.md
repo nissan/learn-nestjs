@@ -26,6 +26,10 @@ cd ..
 git add .  
 ```
 
+## Activity: Updating the package.json
+Using the plugin to VSCode, I updated all the packages to their latest versions.
+There was a conflict with typescript 4.x though, so that was reverted to the original value until further analysis.
+
 
 
 [1]: https://docs.nestjs.com/
