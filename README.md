@@ -39,4 +39,7 @@ There was a conflict with typescript 4.x though, so that was reverted to the ori
 ## Activity: Using Status Codes
 If we use expressjs standard methods by adding @Res decorators itlimits compatibility with nest standard decorators like @HttpCode as well as nest standard interceptors and makes this platform dependent
 
+## Activity: Pagination with Query Parameters
+Best practice: Use path parameters to identify a specific resource, with query parameters to filter or sort that resource
+
 [1]: https://docs.nestjs.com/
