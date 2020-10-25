@@ -52,4 +52,10 @@ we can use instead
 
 `throw new NotFoundException(`${id} not found`);`
 
+## Activity: Creating DTOs
+Generator for a class object for the DTO example
+Best Practice: Mark all DTO properties as read-only to help maintain immutibility. Update DTOs should be optional (use ? after property name, e.g. `private readonly name?:string;`)
+
+`nest g class coffees/dtos/create-coffee.dto`
+
 [1]: https://docs.nestjs.com/
