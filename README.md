@@ -1,4 +1,4 @@
-# Learn NestJS activities#
+# Learn NestJS activities
 
 ## Activity: Reading thru [documentation][1]
 
