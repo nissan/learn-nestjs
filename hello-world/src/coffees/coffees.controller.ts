@@ -1,7 +1,11 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus,Patch, Param, Post,Res, Query } from '@nestjs/common';
+import { CoffeesService } from './coffees.service';
 
 @Controller('coffees')
 export class CoffeesController {
+    constructor(private readonly coffeeService: CoffeesService){
+
+    }
     @Get()
     findAll(@Query() paginationQuery){
         const {limit, offset} = paginationQuery;
