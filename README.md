@@ -54,8 +54,13 @@ we can use instead
 
 ## Activity: Creating DTOs
 Generator for a class object for the DTO example
-Best Practice: Mark all DTO properties as read-only to help maintain immutibility. Update DTOs should be optional (use ? after property name, e.g. `private readonly name?:string;`)
 
 `nest g class coffees/dtos/create-coffee.dto`
 
+- Best Practice: Mark all DTO properties as read-only to help maintain immutibility. Update DTOs should be optional (use ? after property name, e.g. `private readonly name?:string;`)
+- Best Practice: Validate the correctness of data coming into the application, preferably automatically. More details for usage of [class-validator][2] 
+
+Mapped types can be used to maximise code reuse between a create DTO and an update DTO.
+
 [1]: https://docs.nestjs.com/
+[2]: https://github.com/typestack/class-validator#usage
