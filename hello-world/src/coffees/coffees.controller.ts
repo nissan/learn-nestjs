@@ -1,15 +1,20 @@
-import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, HttpStatus, Param, Post, Res } from '@nestjs/common';
 
 @Controller('coffees')
 export class CoffeesController {
     @Get()
     findAll(){
+        
         return "Found all coffees";
     }
 
     @Get('flavours')
-    findFlavours(){
-        return "Found all flavours of coffee";
+    findFlavours(@Res() response){
+        // this approach to use expressjs standard
+        // methods limits compatibility with nest standard decorators
+        // like @HttpCode as well as nest standard interceptors
+        // and makes this platform dependent
+        response.status(HttpStatus.OK).send("Found all flavours of coffee");
     }
 
     @Get(':id')
@@ -18,6 +23,7 @@ export class CoffeesController {
     }
 
     @Post('name')
+    @HttpCode(HttpStatus.GONE)
     createName(@Body('name') body){
         return body;
         //return "This creates a new coffee";
