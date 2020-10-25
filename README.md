@@ -43,7 +43,8 @@ If we use expressjs standard methods by adding @Res decorators itlimits compatib
 Best practice: Use path parameters to identify a specific resource, with query parameters to filter or sort that resource
 
 ## Activity: Creating the basic service
-Nest provides handlers for common exceptions e.g. instead of
+Nest provides a built in exception handling layer. All errors bubble up and come thru, no matter what.
+Also `@nestjs/common` provides handlers for common exceptions e.g. instead of
 
 `throw new HttpException(`${id} not found`, HttpStatus.NOT_FOUND);`
 
