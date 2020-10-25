@@ -36,4 +36,7 @@ There was a conflict with typescript 4.x though, so that was reverted to the ori
 - In a path is `nest g co /{{path/for/controller}}`
 - To simulate before running `nest g co --dry-run`
 
+## Activity: Using Status Codes
+If we use expressjs standard methods by adding @Res decorators itlimits compatibility with nest standard decorators like @HttpCode as well as nest standard interceptors and makes this platform dependent
+
 [1]: https://docs.nestjs.com/
