@@ -42,4 +42,13 @@ If we use expressjs standard methods by adding @Res decorators itlimits compatib
 ## Activity: Pagination with Query Parameters
 Best practice: Use path parameters to identify a specific resource, with query parameters to filter or sort that resource
 
+## Activity: Creating the basic service
+Nest provides handlers for common exceptions e.g. instead of
+
+`throw new HttpException(`${id} not found`, HttpStatus.NOT_FOUND);`
+
+we can use instead
+
+`throw new NotFoundException(`${id} not found`);`
+
 [1]: https://docs.nestjs.com/
