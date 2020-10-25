@@ -17,9 +17,9 @@ export class CoffeesController {
         return this.coffeeService.findOne(id);;
     }
 
-    @Post('name')
+    @Post()
     @HttpCode(HttpStatus.GONE)
-    createName(@Body('name') body){
+    creat(@Body() body){
        return this.coffeeService.create(body);
     }
 
